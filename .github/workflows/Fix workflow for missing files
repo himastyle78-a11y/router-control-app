@@ -24,8 +24,10 @@ jobs:
     
     - name: Copy Source Files
       run: |
-        cp -r lib/* flutter_app/lib/ 2>/dev/null || true
+        mkdir -p flutter_app/lib
+        cp main.dart flutter_app/lib/ 2>/dev/null || true
         cp pubspec.yaml flutter_app/ 2>/dev/null || true
+        cp analysis_options.yaml flutter_app/ 2>/dev/null || true
     
     - name: Install dependencies
       run: |
