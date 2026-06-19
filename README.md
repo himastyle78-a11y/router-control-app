@@ -1,4 +1,4 @@
-# 📡 Router Control App - تطبيق تحكم الراوتر
+.# 📡 Router Control App - تطبيق تحكم الراوتر
 
 [![Build APK](https://github.com/YOUR_USERNAME/router-control-app/actions/workflows/build_apk.yml/badge.svg)](https://github.com/YOUR_USERNAME/router-control-app/actions/workflows/build_apk.yml)
 
