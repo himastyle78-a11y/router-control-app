@@ -1,10 +1,6 @@
 name: Build APK
 
 on:
-  push:
-    branches: [ main, master ]
-  pull_request:
-    branches: [ main, master ]
   workflow_dispatch:
 
 jobs:
@@ -19,6 +15,17 @@ jobs:
       with:
         flutter-version: '3.19.0'
         channel: 'stable'
+    
+    - name: Create Flutter Project
+      run: |
+        flutter create --project-name router_control_app flutter_app
+        cd flutter_app
+        flutter pub add http
+    
+    - name: Copy Source Files
+      run: |
+        cp -r lib/* flutter_app/lib/ 2>/dev/null || true
+        cp pubspec.yaml flutter_app/ 2>/dev/null || true
     
     - name: Install dependencies
       run: |
